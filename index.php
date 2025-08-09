@@ -3,11 +3,18 @@ include ("head.php");
 include("navbar.php");
 ?>
 
-<h1 class="title">The News</h1>
+<div id="content-wrapper">
 
+    <h1 class="title">The News</h1>
 
+    <?php
+    include("carousel.php");
+    ?>
 
-<?php include("carousel.php"); ?>
+</div>
+<?php
+include("footer.php");
+?>
 
 
 

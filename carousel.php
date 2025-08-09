@@ -28,3 +28,37 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
+
+<div class="text-center mt-3">
+    <h3 id="slide-title">Technology</h3>
+    <p id="slide-text">
+        Explore the latest innovations and trends in the tech world.
+    </p>
+</div>
+
+
+<script>
+
+    const titles = [
+        "Technology",
+        "Nature",
+        "Study"
+    ];
+
+    const texts = [
+        "Explore the latest innovations and trends in the tech world.",
+        "Discover the beauty of nature and its wonders.",
+        "Tips and resources to improve your learning journey."
+    ];
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const myCarousel = document.querySelector('#carouselExampleIndicators');
+
+        myCarousel.addEventListener('slid.bs.carousel', function (event) {
+            document.getElementById('slide-title').innerText = titles[event.to];
+            document.getElementById('slide-text').innerText = texts[event.to];
+        });
+    });
+</script>

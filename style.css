@@ -1,4 +1,16 @@
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    flex: 1;
+}
 
 .title {
     font-weight: bold;
@@ -135,13 +147,28 @@ body.light-theme .title {
     object-fit: cover;
 }
 
+#slide-title {
+    font-size: 28px;
+    font-weight: bold;
+}
 
+#slide-text {
+    font-size: 20px;
+    margin-top: 10px;
+}
 
+footer {
+    background-color: #f5f5f5;
+    color: #090D1F;
+    border-top: 1px solid #ccc;
+    padding: 1rem 0;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-
-
-
-
-
-
+body.light-theme footer {
+    background-color: #090D1F;
+    color: #f5f5f5;
+    border-top: 1px solid #444;
+}
 
