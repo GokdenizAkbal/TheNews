@@ -7,8 +7,7 @@ include("navbar.php");
 
 
 
-
-
+<?php include("carousel.php"); ?>
 
 
 
