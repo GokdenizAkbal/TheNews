@@ -9,6 +9,7 @@ include("navbar.php");
 
     <?php
     include("carousel.php");
+    include("card.php");
     ?>
 
 </div>
