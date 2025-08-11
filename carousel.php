@@ -10,7 +10,7 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="Images/technology.jpg" class="d-block w-100" alt="...">
+            <img src="Images/Technology.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
             <img src="Images/Nature.png" class="d-block w-100" alt="...">
