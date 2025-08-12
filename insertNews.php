@@ -13,8 +13,8 @@ $sql = "INSERT INTO news (title, description, image_path, author, publish_date, 
 ('PM mental models', 'Mental models are simple expressions of complex processes or relationships.', 'Images/Models.png', 'Demi Wilkinson', '2023-01-01', 'small', 'product,research,frameworks'),
 ('What is Wireframing?', 'Introduction to Wireframing and its Principles. Learn from the best in the industry.', 'Images/WireFrame.png', 'Candice Wu', '2023-01-01', 'small', 'design,research,presentation'),
 ('How collaboration makes us better designers', 'Collaboration can make our teams stronger, and our individual designs better.', 'Images/Colloboration.png', 'Natali Craig', '2023-01-01', 'small', 'design,research,presentation'),
-('Our top 10 Javascript frameworks to use', 'JavaScript frameworks make development easy with extensive features and functionalities..', 'Images/Framework.png', 'Drew Cano', '2023-01-01', 'small', 'softwareDevelopment,tools,saas'),
-('Podcast: Creating a better CX Community', 'Starting a community doesn’t need to be complicated, but how do you get started?', 'Images/Podcast.png', 'Orlando Diggs', '2023-01-01', 'small', 'podcasts,customerSuccess,presentation'),
+('Our top 10 Javascript frameworks to use', 'JavaScript frameworks make development easy with extensive features and functionalities..', 'Images/Framework.png', 'Drew Cano', '2023-01-01', 'small', 'software Development,tools,saas'),
+('Podcast: Creating a better CX Community', 'Starting a community doesn’t need to be complicated, but how do you get started?', 'Images/Podcast.png', 'Orlando Diggs', '2023-01-01', 'small', 'podcasts,customer Success,presentation'),
 
 -- card.php news (4 quantity)
 ('UX Review Presentation', 'How do you create compelling presentations that wow your colleagues and impress your managers?', 'Images/Review.png', 'Olivia Rhye', '2023-01-01', 'large', 'design,research,presentation'),

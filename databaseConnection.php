@@ -1,10 +1,10 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "12345*678");
+$link = mysqli_connect("localhost", "root", "12345*678","news_portal");
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 // Print host information
-echo "Connect Successfully. Host info: " . mysqli_get_host_info($link);
+// echo "Connect Successfully. Host info: " . mysqli_get_host_info($link);
 ?>
