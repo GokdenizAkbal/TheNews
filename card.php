@@ -1,4 +1,4 @@
-<section class="news-section">
+<!-- <section class="news-section">
     <h2>Recent News</h2>
     <div class="news-grid">
 
@@ -65,5 +65,56 @@
         </article>
 
 
+    </div>
+</section> -->
+
+
+<?php
+include("databaseConnection.php");
+
+// Fetch the latest 4 news items from the database
+$sql = "SELECT * FROM news ORDER BY publish_date DESC LIMIT 4";
+$result = $link->query($sql);
+?>
+
+<section class="news-section">
+    <h2>Recent News</h2>
+    <div class="news-grid">
+        <?php
+        if ($result && $result->num_rows > 0) {
+            $index = 0;
+            while ($row = $result->fetch_assoc()) {
+                // Set card type: first and last item = large, middle items = small
+                $cardClass = ($index === 0 || $index === 3) ? 'large' : 'small';
+                $tags = explode(',', $row['tags']);
+                ?>
+                <article class="news-card <?php echo $cardClass; ?>">
+                    <img src="<?php echo htmlspecialchars($row['image_path']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>">
+                    <div class="news-content">
+                        <p class="news-meta">
+                            <?php echo htmlspecialchars($row['author']) . ' • ' . date('j M Y', strtotime($row['publish_date'])); ?>
+                        </p>
+                        <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                        <p><?php echo htmlspecialchars($row['description']); ?></p>
+                        <div class="news-tags">
+                            <?php
+                            // Loop through tags, convert to camelCase class names, display them
+                            foreach ($tags as $tag) {
+                                $tag_trimmed = trim($tag);
+                                $tag_class = toCamelCase($tag_trimmed);
+                                $tag_text = ucwords($tag_trimmed);
+                                echo "<span class=\"$tag_class\">$tag_text</span>";
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </article>
+                <?php
+                $index++;
+            }
+        } else {
+            echo "<p>No recent news available.</p>";
+        }
+        ?>
     </div>
 </section>
