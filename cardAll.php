@@ -92,16 +92,6 @@
 <?php
 include("databaseConnection.php");
 
-function toCamelCase($string) {
-    $str = strtolower($string);
-    $words = explode(' ', $str);
-    $camelCase = array_shift($words);
-    foreach ($words as $word) {
-        $camelCase .= ucfirst($word);
-    }
-    return $camelCase;
-}
-
 $sql = "SELECT * FROM news ORDER BY publish_date DESC";
 $result = $link->query($sql);
 ?>
