@@ -371,3 +371,59 @@ body.light-theme .news-card-all .news-meta {
 
 
 
+
+/* Pagination container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Pagination buttons */
+.pagination .page-link {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    color: #090D1F;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.pagination .page-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Active page */
+.pagination .page-link.active {
+    background-color: #6941C6;
+    color: #ffffff;
+    border-color: #6941C6;
+}
+
+/* Disabled state for prev/next */
+.pagination .page-link[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Light theme adjustments */
+body.light-theme .pagination .page-link {
+    background-color: #090D1F;
+    color: #f5f5f5;
+    border: 1px solid #444;
+}
+
+body.light-theme .pagination .page-link:hover {
+    background-color: #1a1f2e;
+}
+
+body.light-theme .pagination .page-link.active {
+    background-color: #6941C6;
+    color: #ffffff;
+    border-color: #6941C6;
+}
