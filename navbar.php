@@ -12,7 +12,7 @@
     <div class="navbar-left">Goko</div>
     <div class="navbar-right">
         <a href="index.php">News</a>
-        <a href="#">Projects</a>
+        <a href="allNews.php">All News</a>
         <a href="about.php">About</a>
         <div class="theme-toggle light" id="themeToggle">
             <div class="toggle-thumb"></div>
