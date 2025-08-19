@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=UTF-8');
 
 include 'databaseConnection.php';
-include 'functions.php'; // toCamelCase fonksiyonu burada olacak
+include 'functions.php';
 
 $perPage = 6;
 $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;

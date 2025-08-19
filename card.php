@@ -71,6 +71,7 @@
 
 <?php
 include("databaseConnection.php");
+include("functions.php");
 
 // Fetch the latest 4 news items from the database
 $sql = "SELECT * FROM news ORDER BY publish_date DESC LIMIT 4";
