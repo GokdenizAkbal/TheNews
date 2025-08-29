@@ -427,3 +427,163 @@ body.light-theme .pagination .page-link.active {
     color: #ffffff;
     border-color: #6941C6;
 }
+
+
+
+/* Admin panel wrapper */
+.admin-panel {
+    max-width: 1280px;
+    margin: 2rem auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Common card style */
+.admin-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    flex: 1 1 350px;
+    min-width: 300px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme .admin-card {
+    background-color: #090D1F;
+    color: #f5f5f5;
+}
+
+.admin-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #090D1F;
+}
+
+body.light-theme .admin-card h3 {
+    color: #f5f5f5;
+}
+
+.admin-card input[type="text"],
+.admin-card input[type="date"],
+.admin-card input[type="file"],
+.admin-card select,
+.admin-card textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+    color: #090D1F;
+}
+
+body.light-theme .admin-card input,
+body.light-theme .admin-card select,
+body.light-theme .admin-card textarea {
+    background-color: #1a1f2e;
+    color: #f5f5f5;
+    border: 1px solid #444;
+}
+
+.admin-card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.admin-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button colors */
+.btn-add { background-color: #6941C6; color: #fff; }
+.btn-add:hover { background-color: #5a35b0; }
+
+.btn-edit { background-color: #027A48; color: #fff; }
+.btn-edit:hover { background-color: #026038; }
+
+.btn-delete { background-color: #C11574; color: #fff; }
+.btn-delete:hover { background-color: #a10f5e; }
+
+/* Image Preview */
+.admin-card img {
+    display: block;
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Responsive */
+.admin-card input[type="file"] {
+    margin-bottom: 8px;
+}
+
+/* Same height for multiple cards */
+.admin-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-green {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-green:hover {
+    background-color: #2ecc71;
+}
+
+.btn-red {
+    background-color: #C11574;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-red:hover {
+    background-color: #a10f5e;
+}
+
+#newsIdInput {
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+#fetchBtn {
+    margin-top: 8px;
+}
+
+#editForm {
+    display: none;
+    margin-top: 12px;
+}
+
+.edit-delete-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 10px;
+}
+
+.edit-delete-buttons button {
+    flex: 1;
+}

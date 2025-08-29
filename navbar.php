@@ -14,6 +14,13 @@
         <a href="index.php">News</a>
         <a href="allNews.php">All News</a>
         <a href="about.php">About</a>
+
+        <?php
+        if(basename($_SERVER['PHP_SELF']) == 'adminPanel.php') {
+            echo '<a href="adminPanel.php">Admin</a>';
+        }
+        ?>
+
         <div class="theme-toggle light" id="themeToggle">
             <div class="toggle-thumb"></div>
             <div class="icon sun-icon"><i class="bi bi-sun"></i></div>

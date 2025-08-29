@@ -1,17 +1,32 @@
 <?php
-
 $link = mysqli_connect("localhost", "root", "12345*678", "news_portal");
+
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-// Attempt delete query execution
-$sql = "DELETE FROM news ";
-if(mysqli_query($link, $sql)){
-    echo "Records were deleted successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $news_id = $_POST['news_id'] ?? '';
+
+    if(empty($news_id)){
+        die("Error: News ID missing. Operation aborted.");
+    }
+
+    // Prepare statement to avoid SQL injection
+    $stmt = mysqli_prepare($link, "DELETE FROM news WHERE id = ?");
+    mysqli_stmt_bind_param($stmt, "i", $news_id);
+
+    if(mysqli_stmt_execute($stmt)){
+        echo "News deleted successfully!";
+    } else {
+        echo "Delete failed: " . mysqli_error($link);
+    }
+
+    mysqli_stmt_close($stmt);
+} else {
+    die("Invalid request.");
 }
-// Close connection
+
 mysqli_close($link);
 ?>
